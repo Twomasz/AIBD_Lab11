@@ -43,16 +43,16 @@ W tych trzech okręgach populacja wynosi 5201602.
 #### Ile dzielnic ("neighborhoods") znajduje się w każdej gminie (borough)?
 
 ``` sql
-SELECT COUNT(nghbhd) FROM nyc_subway_stations WHERE borough='Manhattan';
-SELECT COUNT(nghbhd) FROM nyc_subway_stations WHERE borough='The Bronx';
-SELECT COUNT(nghbhd) FROM nyc_subway_stations WHERE borough='Staten Island';
-SELECT COUNT(nghbhd) FROM nyc_subway_stations WHERE borough='Brooklyn';
-SELECT COUNT(nghbhd) FROM nyc_subway_stations WHERE borough='Queens';
+SELECT 
+  boroname, 
+  COUNT(name) 
+FROM "public"."nyc_neighborhoods
+GROUP BY boroname;
 ```
 
 Liczba dzielnic:
-- Manhattan: 0<br />
-- Bronx: 0<br />
-- Staten Island: 0<br />
-- Brooklyn: 0<br />
-- Queens: 0<br />
+- Manhattan: 28 <br />
+- The Bronx: 24 <br />
+- Staten Island: 24 <br />
+- Brooklyn: 23 <br />
+- Queens: 30 <br />
