@@ -46,7 +46,7 @@ W tych trzech okręgach populacja wynosi 5201602.
 SELECT 
   boroname, 
   COUNT(name) 
-FROM "public"."nyc_neighborhoods
+FROM "public"."nyc_neighborhoods"
 GROUP BY boroname;
 ```
 
